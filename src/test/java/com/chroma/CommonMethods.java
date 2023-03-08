@@ -95,6 +95,7 @@ public class CommonMethods {
 
     /**
      * Use this method to assert an actual value with an expected value with message
+     * 
      * @param actual
      * @param expected
      * @param message
@@ -107,4 +108,12 @@ public class CommonMethods {
         }
     }
 
+    /**
+     * Use this method to dynamically locate an element using exact text
+     * @param text
+     * @return
+     */
+    public static WebElement dynamicTextLocator(String text) {
+        return driver.findElement(By.xpath("//*[text()='" + text + "']"));
+    }
 }
